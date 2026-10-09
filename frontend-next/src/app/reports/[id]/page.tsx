@@ -61,7 +61,7 @@ export default function ReportDetailPage() {
         <div className="space-y-6 lg:col-span-1">
           <Card className="overflow-hidden">
             <img 
-              src={`http://127.0.0.1:8000/uploads/${item.image_file}`} 
+              src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${item.image_file}`} 
               alt="Analyzed Plant" 
               className="w-full h-auto aspect-square object-cover"
             />

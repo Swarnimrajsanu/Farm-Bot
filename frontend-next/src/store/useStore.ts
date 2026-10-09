@@ -29,7 +29,7 @@ export const useStore = create<AppState>((set) => ({
   fetchHistory: async () => {
     set({ loading: true, error: null })
     try {
-      const res = await axios.get('http://127.0.0.1:8000/history')
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/history`)
       set({ history: res.data.predictions, loading: false })
     } catch (err: any) {
       set({ error: err.message, loading: false })

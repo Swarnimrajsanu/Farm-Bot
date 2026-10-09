@@ -60,7 +60,7 @@ export default function LiveFeedPage() {
                   <div className="flex flex-col md:flex-row">
                     <div className="md:w-64 shrink-0 relative bg-muted">
                       <img 
-                        src={`http://127.0.0.1:8000/uploads/${item.image_file}`} 
+                        src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${item.image_file}`} 
                         className="w-full h-full object-cover aspect-video md:aspect-square" 
                         alt="Live scan"
                       />

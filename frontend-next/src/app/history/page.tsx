@@ -73,7 +73,7 @@ export default function HistoryPage() {
                       <tr className="bg-card hover:bg-muted/30 transition-colors cursor-pointer">
                         <td className="px-6 py-3">
                           <img 
-                            src={`http://127.0.0.1:8000/uploads/${item.image_file}`} 
+                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${item.image_file}`} 
                             className="h-12 w-12 rounded object-cover border shadow-sm" 
                             alt="Plant"
                           />
@@ -116,7 +116,7 @@ export default function HistoryPage() {
               <Link href={`/reports/${item.image_file}`} key={idx}>
                 <Card className="overflow-hidden hover:shadow-md transition-all flex flex-col cursor-pointer h-full border-transparent hover:border-border">
                   <img 
-                    src={`http://127.0.0.1:8000/uploads/${item.image_file}`} 
+                    src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${item.image_file}`} 
                     className="w-full h-48 object-cover" 
                     alt="Plant"
                   />

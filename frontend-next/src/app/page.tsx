@@ -97,7 +97,7 @@ export default function Dashboard() {
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3 bg-muted">
                 <img 
-                  src={`http://127.0.0.1:8000/uploads/${latest.image_file}`} 
+                  src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${latest.image_file}`} 
                   alt="Recent plant" 
                   className="w-full h-64 md:h-full object-cover"
                 />
@@ -122,7 +122,7 @@ export default function Dashboard() {
                     {latest.batch_images.map((img, i) => (
                       <img 
                         key={i}
-                        src={`http://127.0.0.1:8000/uploads/${img}`}
+                        src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img}`}
                         className="h-16 w-16 rounded-lg object-cover border-2 border-background shadow-sm hover:border-primary transition-colors cursor-zoom-in"
                         alt={`Shot ${i+1}`}
                       />
