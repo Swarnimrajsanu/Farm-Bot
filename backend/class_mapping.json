@@ -37,8 +37,7 @@
     "Tomato___Target_Spot": 34,
     "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 35,
     "Tomato___Tomato_mosaic_virus": 36,
-    "Tomato___healthy": 37,
-    "flower_data": 38
+    "Tomato___healthy": 37
   },
   "idx_to_class": {
     "0": "Apple___Apple_scab",
@@ -78,9 +77,10 @@
     "34": "Tomato___Target_Spot",
     "35": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
     "36": "Tomato___Tomato_mosaic_virus",
-    "37": "Tomato___healthy",
-    "38": "flower_data"
+    "37": "Tomato___healthy"
   },
-  "num_classes": 39,
-  "model_type": "mobilenet"
+  "num_classes": 38,
+  "model_type": "mobilenet",
+  "dataset": "abdallahalidev/plantvillage-dataset",
+  "dataset_url": "https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset"
 }
