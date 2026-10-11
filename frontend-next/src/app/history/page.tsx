@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 import { useStore } from "@/store/useStore"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -10,7 +10,7 @@ import Link from "next/link"
 
 import { useSearchParams } from "next/navigation"
 
-export default function HistoryPage() {
+function HistoryContent() {
   const { history, fetchHistory } = useStore()
   const [view, setView] = useState<"grid" | "table">("table")
   const searchParams = useSearchParams()
@@ -147,5 +147,13 @@ export default function HistoryPage() {
         </div>
       )}
     </div>
+  )
+}
+
+export default function HistoryPage() {
+  return (
+    <Suspense fallback={<div className="p-8 text-center text-muted-foreground">Loading history...</div>}>
+      <HistoryContent />
+    </Suspense>
   )
 }
